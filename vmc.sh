@@ -178,6 +178,8 @@ _connect_vm()
                 done
                 until nc -vzw 2 "$ip" 22; do sleep 2; done
                 sshpass -p amd1234 ssh -o StrictHostKeyChecking=no root@"$ip"
+                # windows
+                #sshpass -p amd@1234 ssh -o StrictHostKeyChecking=no Administrator@"$ip"
         else
                 echo "VM is not running"
         fi
